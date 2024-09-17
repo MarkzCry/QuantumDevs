@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #fefefe;
+    color: #333;
+    padding: 15px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 10px;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu ul li a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+.menu ul li a:hover {
+    color: #f78c41;
+}
+
+.colorize-home {
+    color: #f78c41;
+}
+
+.toggleMenu {
+    display: none;
+    font-size: 28px;
+    color: #333;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.toggleMenu {
+    display: none;
+    font-size: 28px;
+    color: #333;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.about-mission {
+    background-image: url(../images/background.png);
+    background-size: cover;
+    text-align: center;
+    padding: 100px 20px;
+    color: #333;
+    margin: 0 auto;
+    background-color: rgba(192, 192, 192, 0.637);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.about-mission h1 {
+    font-size: 64px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.icon-h1 {
+    height: auto;
+    width: 100px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+@keyframes colorCycle {
+    0% {
+        color: #23a4df;
+    }
+
+    20% {
+        color: #f78c41;
+    }
+
+    40% {
+        color: #e72559;
+    }
+
+    60% {
+        color: #f86149;
+    }
+
+    80% {
+        color: #1f428f;
+    }
+
+    100% {
+        color: #23a4df;
+    }
+}
+
+.about-mission h2 {
+    font-family: sans-serif;
+    font-size: 36px;
+    color: #ffffff;
+    animation: colorCycle 4s infinite;
+}
+
+.mission-and-quote {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 80px 20px;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.mission-and-quote p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.mission-and-quote button {
+    padding: 12px 25px;
+    font-size: 18px;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.mission-and-quote button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #fefefe;
+    color: #333;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+footer h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+footer a {
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .menu {
+        display: none;
+        width: 100%;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .toggleMenu {
+        display: block;
+    }
+
+    .showMenu .menu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-mission h1 {
+        font-size: 42px;
+    }
+
+    .about-mission h2 {
+        font-size: 28px;
+    }
+
+    footer h1 {
+        font-size: 24px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
