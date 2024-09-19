@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>QuantumDevs | Quote Form</title>
+    <link rel="icon" type="image/png" href="images/icon2.png">
+    <link rel="stylesheet" href="css/quote.css">
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <meta property="og:title" content="QuantumDevs | Full-Stack Web Development" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://quantumdevs.co/quote" />
+    <meta property="og:image" content="https://quantumdevs.co/images/quantumdevs.png" />
+    <meta property="og:description"
+        content="Get a quote!" />
+    <meta property="og:site_name" content="QuantumDevs" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="/">
+                <h1><img src="images/icon.png" alt="QuantumDevs Logo">QuantumDevs</h1>
+            </a>
+        </div>
+        <button class="toggleMenu" onclick="toggleMenu()">☰</button>
+        <nav class="menu">
+            <ul>
+                <li><a onclick="toggleMenu()" class="colorize-home" style="color: #f78c41;" href="/">Home</a></li>
+                <li><a onclick="toggleMenu()" href="/#services">Services</a></li>
+                <li><a onclick="toggleMenu()" href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="about-mission">
+        <h1><img class="icon-h1" src="./images/icon.png" alt="Icon" class="icon">Quote Form</h1>
+    </div>
+
+    <div class="form-container">
+        <form id="quoteForm">
+            <!-- Progress Bar -->
+            <div class="progress-bar-container">
+                <div id="progressBar" class="progress-bar">0%</div>
+            </div>
+        
+            <!-- Basic Information -->
+            <div class="section" id="basicInfo">
+                <h2>Basic Information</h2>
+                <input type="text" name="fullName" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="tel" name="phone" placeholder="Phone Number (optional)">
+                <button type="button" onclick="nextSection('projectDetails')">Next</button>
+            </div>
+        
+            <!-- Project Details -->
+            <div class="section" id="projectDetails" style="display:none;">
+                <h2>Project Details</h2>
+                <input type="text" name="projectPurpose" placeholder="What is the primary purpose of your website?" required>
+                <textarea name="projectGoals" placeholder="What are your main goals for this new website?" rows="4" required></textarea>
+                <button type="button" onclick="prevSection('basicInfo')">Previous</button>
+                <button type="button" onclick="nextSection('designPreferences')">Next</button>
+            </div>
+        
+            <!-- Design Preferences -->
+            <div class="section" id="designPreferences" style="display:none;">
+                <h2>Design Preferences</h2>
+                <textarea name="designPreferences" placeholder="Do you have any design preferences or examples of websites you like?" rows="4"></textarea>
+                <textarea name="colorsFonts" placeholder="Are there specific colors, fonts, or styles you want to use?" rows="4"></textarea>
+                <button type="button" onclick="prevSection('projectDetails')">Previous</button>
+                <button type="button" onclick="nextSection('content')">Next</button>
+            </div>
+        
+            <!-- Content -->
+            <div class="section" id="content" style="display:none;">
+                <h2>Content</h2>
+                <textarea name="contentProvision" placeholder="Will you provide the content for the website (text, images, videos), or do you need content creation services?" rows="4"></textarea>
+                <input type="number" name="pageCount" placeholder="How many pages will the website have?" required>
+                <button type="button" onclick="prevSection('designPreferences')">Previous</button>
+                <button type="button" onclick="nextSection('functionality')">Next</button>
+            </div>
+        
+            <!-- Functionality -->
+            <div class="section" id="functionality" style="display:none;">
+                <h2>Functionality</h2>
+                <textarea name="featuresNeeded" placeholder="What specific features do you need? (e.g., contact forms, booking systems)" rows="4"></textarea>
+                <textarea name="thirdPartyIntegrations" placeholder="Will you need any third-party integrations (e.g., social media)?" rows="4"></textarea>
+                <button type="button" onclick="prevSection('content')">Previous</button>
+                <button type="button" onclick="nextSection('timelineBudget')">Next</button>
+            </div>
+        
+            <!-- Timeline and Budget -->
+            <div class="section" id="timelineBudget" style="display:none;">
+                <h2>Timeline and Budget</h2>
+                <input type="text" name="timeline" placeholder="What is your desired timeline for completing the project?" required>
+                <input type="text" name="budget" placeholder="Do you have a budget range for this project?" required>
+                <button type="button" onclick="prevSection('functionality')">Previous</button>
+                <button type="button" onclick="nextSection('additionalInfo')">Next</button>
+            </div>
+        
+            <!-- Additional Information -->
+            <div class="section" id="additionalInfo" style="display:none;">
+                <h2>Additional Information</h2>
+                <textarea name="additionalDetails" placeholder="Are there any other details or special requirements you would like to mention?" rows="4"></textarea>
+                <input type="text" name="referralSource" placeholder="How did you hear about us?" required>
+                <button type="button" onclick="prevSection('timelineBudget')">Previous</button>
+                <button type="submit">Submit</button>
+            </div>
+        </form>        
+    </div>
+    <div class="view-websites">
+        <h1>Websites Created by Us!</h1>
+        <div class="website-list">
+
+        </div>
+    </div>
+    <footer id="contact">
+        <h1>Contact Information</h1>
+        <p>Email: <a style="color: #f78c41; text-decoration: underline;"
+                href="mailto:admin@quantumdevs.co">admin@quantumdevs.co</a></p>
+        <a href="https://www.instagram.com/quantumdevs.co" target="_blank">
+            <img src="images/instagram-icon.png" alt="Instagram"
+                style="width: 34px; height: 34pzx; vertical-align: middle;">
+        </a>
+    </footer>
+
+    <script src="js/quote.js"></script>
+</body>
+
+</html>
