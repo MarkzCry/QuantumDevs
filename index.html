@@ -2,30 +2,37 @@
 <html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>QuantumDevs | Empowering Your Digital Presence</title>
     <link rel="icon" type="image/png" href="images/icon2.png">
     <link rel="stylesheet" href="css/index.css">
     <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <meta property="og:title" content="QuantumDevs | Full-Stack Web Development" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://quantumdevs.co" />
     <meta property="og:image" content="https://quantumdevs.co/images/quantumdevs.png" />
-    <meta property="og:description" content="Get a professional website today! Let QuantumDevs bring your brand to life with custom web development services." />
+    <meta property="og:description"
+        content="Get a professional website today! Let QuantumDevs bring your brand to life with custom web development services." />
     <meta property="og:site_name" content="QuantumDevs" />
 </head>
 
 <body>
     <header class="header">
         <div class="logo">
-            <h1><img src="images/icon.png" alt="QuantumDevs Logo">QuantumDevs</h1>
+            <a href="/">
+                <h1><img src="images/icon.png" alt="QuantumDevs Logo">QuantumDevs</h1>
+            </a>
         </div>
         <button class="toggleMenu" onclick="toggleMenu()">☰</button>
         <nav class="menu">
             <ul>
                 <li><a onclick="toggleMenu()" class="colorize-home" style="color: #f78c41;" href="/">Home</a></li>
-                <li><a onclick="toggleMenu()" href="#">Services</a></li>
-                <li><a onclick="toggleMenu()" href="#">Portfolio</a></li>
+                <li><a onclick="toggleMenu()" href="#services">Services</a></li>
                 <li><a onclick="toggleMenu()" href="#contact">Contact Us</a></li>
             </ul>
         </nav>
@@ -34,21 +41,56 @@
         <h1><img class="icon-h1" src="./images/icon.png" alt="Icon" class="icon">QuantumDevs</h1>
         <h2>Empowering Your Digital Presence</h2>
     </div>
-    <h1 style="text-align: center; font-size: 20px;">⚠️ Website Still in development ⚠️</h1>
     <div class="mission-and-quote">
         <div class="get-quote">
-            
+            <h2>Unlock Your Digital Potential</h2>
+            <p>Your website is the gateway to your business. Let us build a site that truly represents your brand,
+                engages your audience, and drives growth. Stand out from the competition with a custom-tailored web
+                solution.</p>
+            <p class="color-24a4df">Building your website has never been easier!</p>
+            <div class="quote-container">
+                <button class="quote-btn"onclick="window.location.href='/quote'">Get a Free Quote</button>
+                <div class="arrow">←</div>
+            </div>
         </div>
-        <div class="mission">
+
+        <div class="mission" id="services">
+            <h2>Our Mission</h2>
+            <p>At QuantumDevs, we aim to empower businesses by crafting modern, responsive websites that not only look
+                great but also perform efficiently. In today's digital-first world, having a strong online presence is
+                essential. A well-designed website establishes <a class="color-f78c41">credibility</a>, builds <a
+                    class="color-f78c41">trust</a>, and helps you reach a wider
+                audience. Whether you're looking to showcase your portfolio, sell products, or connect with clients,
+                your website is a <a class="color-f78c41">crucial</a> part of your brand's identity.</p>
+            <p>We specialize in:</p>
+            <ul>
+                <li>Custom web design and development</li>
+                <li>Responsive and mobile-friendly designs</li>
+                <li>API Integration</li>
+                <li>Website maintenance and support</li>
+            </ul>
+            <p>With our expert services, you can ensure your business stands out in an increasingly competitive online
+                space. We're dedicated to building websites that reflect your brand's values and help you achieve your
+                goals.</p>
+        </div>
+    </div>
+
+    <div class="view-websites">
+        <h1>Websites Created by Us!</h1>
+        <div class="website-list">
 
         </div>
     </div>
     <footer id="contact">
         <h1>Contact Information</h1>
-        <p>Email: <a style="color: #e2f0e3;" href="mailto:info@quantumdevs.co">info@quantumdevs.co</a></p>
-        <p>Phone: <a style="color: #e2f0e3;" href="tel:+123456789">+1 (123) 456-7890</a></p>
+        <p>Email: <a style="color: #f78c41; text-decoration: underline;"
+                href="mailto:admin@quantumdevs.co">admin@quantumdevs.co</a></p>
+        <a href="https://www.instagram.com/quantumdevs.co" target="_blank">
+            <img src="images/instagram-icon.png" alt="Instagram"
+                style="width: 34px; height: 34pzx; vertical-align: middle;">
+        </a>
     </footer>
-    
+
     <script src="js/script.js"></script>
 </body>
 
