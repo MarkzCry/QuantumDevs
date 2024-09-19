@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Roboto", sans-serif;
     background-color: #f5f5f5;
     color: #333;
     line-height: 1.6;
@@ -28,6 +28,15 @@ header {
 .logo {
     display: flex;
     align-items: center;
+}
+
+.logo a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo a:hover {
+    opacity: 0.8;
 }
 
 .logo h1 {
@@ -72,7 +81,12 @@ header {
     background: none;
     border: none;
     cursor: pointer;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1100;
 }
+
 
 .toggleMenu {
     display: none;
@@ -81,6 +95,14 @@ header {
     background: none;
     border: none;
     cursor: pointer;
+}
+
+.color-f78c41 {
+    color: #f78c41;
+}
+
+.color-24a4df {
+    color: #24a4df;
 }
 
 .about-mission {
@@ -94,6 +116,7 @@ header {
     background-blend-mode: multiply;
     background-repeat: no-repeat;
     background-position: center center;
+    filter: contrast(1.3);
 }
 
 .about-mission h1 {
@@ -101,6 +124,7 @@ header {
     margin-bottom: 20px;
     letter-spacing: 2px;
     color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .icon-h1 {
@@ -137,40 +161,180 @@ header {
 }
 
 .about-mission h2 {
-    font-family: sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 36px;
     color: #ffffff;
-    animation: colorCycle 4s infinite;
+    animation: colorCycle 10s infinite;
+    text-shadow:
+        1px 1px 2px rgba(105, 105, 105, 0.5),
+        -1px -1px 2px rgba(105, 105, 105, 0.5),
+        1px -1px 2px rgba(105, 105, 105, 0.5),
+        -1px 1px 2px rgba(105, 105, 105, 0.5);
 }
 
 .mission-and-quote {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 80px 20px;
-    background-color: #f0f0f0;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 60px 20px;
+    background-color: #f7f7f7;
     color: #333;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
-.mission-and-quote p {
-    font-size: 20px;
+.get-quote,
+.mission {
+    max-width: 500px;
+    flex: 1;
+}
+
+.get-quote h2,
+.mission h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #24a4df;
+}
+
+.get-quote p,
+.mission p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.mission ul {
+    list-style-type: disc;
+    padding-left: 20px;
     margin-bottom: 20px;
 }
 
-.mission-and-quote button {
+.quote-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote-btn {
     padding: 12px 25px;
     font-size: 18px;
-    background-color: #007BFF;
+    background-color: #24a4df;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     color: #fff;
-    transition: background-color 0.3s ease;
+    transition: transform 0.5s ease, background-color 1s ease;
+    margin-right: 10px;
 }
 
-.mission-and-quote button:hover {
-    background-color: #0056b3;
+.quote-btn:hover {
+    animation: backgroundColorCycle 4s linear infinite;
+    transform: scale(1.1);
+}
+
+@keyframes backgroundColorCycle {
+    0% {
+        background-color: #23a4df;
+    }
+
+    20% {
+        background-color: #f78c41;
+    }
+
+    40% {
+        background-color: #e72559;
+    }
+
+    60% {
+        background-color: #f86149;
+    }
+
+    80% {
+        background-color: #1f428f;
+    }
+
+    100% {
+        background-color: #23a4df;
+    }
+}
+
+.arrow {
+    font-size: 30px;
+    color: #24a4df;
+    animation: arrowBounce 1.5s infinite;
+}
+
+@keyframes arrowBounce {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.view-websites {
+    text-align: center;
+    padding: 20px;
+}
+
+.website-list {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.website-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.website-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.website-item h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #24a4df;
+}
+
+.website-item p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .mission-and-quote {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .get-quote,
+    .mission {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .mission ul {
+        text-align: left;
+        margin: 0 auto;
+        max-width: 300px;
+    }
 }
 
 footer {
@@ -210,6 +374,7 @@ footer a:hover {
     .menu {
         display: none;
         width: 100%;
+        text-align: center;
     }
 
     .menu ul {
@@ -223,7 +388,7 @@ footer a:hover {
         display: block;
     }
 
-    .showMenu .menu {
+    .showMenu{
         display: flex;
         flex-direction: column;
     }
