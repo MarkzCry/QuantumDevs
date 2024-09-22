@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
     
             try {
-                const response = await fetch('https://c7977217-93fd-4e50-a889-efe7ce226967-00-28yatvlhgsnr2.picard.replit.dev/submit-quote-form', {
+                const response = await fetch('https://server.quantumdevs.co/submit-quote-form', {
                     method: 'POST',
                     body: formData
                 });
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Fetch websites and populate the list
     async function fetchWebsites() {
         try {
-            const response = await fetch('https://c7977217-93fd-4e50-a889-efe7ce226967-00-28yatvlhgsnr2.picard.replit.dev/websites');
+            const response = await fetch('https://server.quantumdevs.co/websites');
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
