@@ -5,7 +5,7 @@ function toggleMenu() {
 
 async function fetchWebsites() {
     try {
-        const response = await fetch('https://c7977217-93fd-4e50-a889-efe7ce226967-00-28yatvlhgsnr2.picard.replit.dev/websites');
+        const response = await fetch('https://server.quantumdevs.co/websites');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
